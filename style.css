@@ -1,0 +1,55 @@
+#view {
+  margin-top: 20px;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.2em;
+  color: white;
+  background-color: black;
+}
+
+input {
+  display: block;
+  margin: 10px 0;
+  border-radius: 4px;
+}
+
+.valid {
+  border-color: green;
+}
+
+.invalid {
+  border-color: red;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #2178d4;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+#createdElementsContainer {
+  margin-top: 20px;
+}
+
+.dynamic-element {
+  padding: 15px;
+  margin: 10px 0;
+  border: 2px solid #4caf50;
+  background-color: #e8f5e9;
+  border-radius: 5px;
+  width: fit-content;
+  box-sizing: border-box;
+}
+#exampleText {
+  padding-top: 50px;
+  text-align: center;
+  font-family: cursive;
+  margin: 0 auto;
+  font-size: 30px;
+  color: white;
+  border-radius: 10px;
+  height: 120px;
+  width: 500px;
+}

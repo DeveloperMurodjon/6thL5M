@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>6thL5M</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        margin: 20px;
+      }
+      form {
+        margin-bottom: 20px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+      }
+      th,
+      td {
+        border: 1px solid #ccc;
+        padding: 8px;
+        text-align: left;
+      }
+      th {
+        background-color: #f4f4f4;
+      }
+      .delete-btn {
+        background-color: #e74c3c;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+      }
+      .delete-btn:hover {
+        background-color: #c0392b;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 1-MASHQ -->
+    <h2>1-mashq</h2>
+    <p>
+      Foydalanuvchi forma maydonlariga o‘z ma’lumotlarini (ism, familiya, email)
+      kiritadi va Qo‘shish tugmasini bosganda, ushbu ma’lumotlar jadvalga
+      qo‘shiladi.
+    </p>
+    <form id="userForm">
+      <label>
+        Ism:
+        <input type="text" id="name" />
+      </label>
+      <label>
+        Familiya:
+        <input type="text" id="surname" />
+      </label>
+      <label>
+        Email:
+        <input type="email" id="email" />
+      </label>
+      <button id="addBtn" type="submit">Qo'shish</button>
+    </form>
+    <h2>4-mashq</h2>
+    <p>
+      Foydalanuvchi formadagi Qidiruv maydoniga ma’lumot kiritganda, jadvaldagi
+      qatorlar qidiruv so‘ziga mos ravishda filtrlanadi.
+    </p>
+    <label for="search">Qidirish:</label>
+    <input id="search" type="search" />
+    <table id="dataTable">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Ism</th>
+          <th>Familiya</th>
+          <th>Email</th>
+          <th>Harakat</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <!-- 2-mashq -->
+    <h2>2-mashq</h2>
+    <form id="colorForm">
+      <label>
+        Rangni tanlang:
+        <input type="color" id="colorPicker" />
+      </label>
+    </form>
+    <div id="exampleText">Text</div>
+
+    <!-- 3-mashq -->
+    <h2>3-mashq</h2>
+    <form id="valForm">
+      <label>
+        Ism:
+        <input class="info" type="text" id="valName" />
+      </label>
+      <label>
+        Familiya:
+        <input class="info" type="text" id="valSurname" />
+      </label>
+      <label> Kasbingiz: <input class="info" type="text" /> </label>
+      <label>
+        Qaysi fudbol jamoasiga qiziqasiz:
+        <input class="info" type="tel" />
+      </label>
+      <label>
+        Manzil:
+        <input class="info" type="text" id="valAddress" />
+      </label>
+      <button id="submitBtn" type="submit">Yuborish</button>
+    </form>
+
+    <!-- 4-MASHQ -->
+    <h2>4-mashq</h2>
+    <input type="search" />
+
+    <!-- 5-mashq -->
+    <!-- <h2>5-mashq</h2>
+    <form id="elementForm">
+      <label for="elementType">Element turi:</label>
+      <input
+        type="text"
+        id="elementType"
+        placeholder="Masalan: div, p"
+        required
+      />
+
+      <label for="elementContent">Element mazmuni:</label>
+      <input
+        type="text"
+        id="elementContent"
+        placeholder="Elementning mazmuni"
+        required
+      />
+
+      <button type="submit">Yaratish</button>
+    </form>
+    <div id="createdElementsContainer"></div> -->
+
+    <!-- 6-mashq -->
+    <!-- <h2>6-mashq</h2>
+    <form id="imageForm">
+      <label for="imageURL">Rasm URL:</label>
+      <input
+        type="text"
+        id="imageURL"
+        placeholder="Rasm URL kiritish"
+        required
+      />
+      <button type="submit">Qo'shish</button>
+    </form>
+
+    <div id="sliderContainer">
+      <button id="prevBtn">Oldingi</button>
+      <div
+        id="imageSlider"
+        style="width: 300px; height: 200px; overflow: hidden"
+      >
+        <div
+          id="slider"
+          style="display: flex; transition: transform 0.5s ease"
+        ></div>
+      </div>
+      <button id="nextBtn">Keyingi</button>
+    </div> -->
+
+    <script src="main.js"></script>
+  </body>
+</html>
