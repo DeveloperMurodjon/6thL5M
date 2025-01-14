@@ -55,10 +55,7 @@
         Familiya:
         <input type="text" id="surname" />
       </label>
-      <label>
-        Email:
-        <input type="email" id="email" />
-      </label>
+      <label> Email: <input type="email" id="email" required /> </label>
       <button id="addBtn" type="submit">Qo'shish</button>
     </form>
     <h2>4-mashq</h2>
@@ -75,7 +72,7 @@
           <th>Ism</th>
           <th>Familiya</th>
           <th>Email</th>
-          <th>Harakat</th>
+          <th>O'zgartirish</th>
         </tr>
       </thead>
       <tbody></tbody>
@@ -114,12 +111,8 @@
       <button id="submitBtn" type="submit">Yuborish</button>
     </form>
 
-    <!-- 4-MASHQ -->
-    <h2>4-mashq</h2>
-    <input type="search" />
-
-    <!-- 5-mashq -->
-    <!-- <h2>5-mashq</h2>
+    <!-- 5-mashq  //tushinmadim -->
+    <h2>5-mashq</h2>
     <form id="elementForm">
       <label for="elementType">Element turi:</label>
       <input
@@ -136,38 +129,80 @@
         placeholder="Elementning mazmuni"
         required
       />
-
       <button type="submit">Yaratish</button>
     </form>
-    <div id="createdElementsContainer"></div> -->
+    <div id="createdElementsContainer"></div>
 
     <!-- 6-mashq -->
-    <!-- <h2>6-mashq</h2>
-    <form id="imageForm">
-      <label for="imageURL">Rasm URL:</label>
-      <input
-        type="text"
-        id="imageURL"
-        placeholder="Rasm URL kiritish"
-        required
-      />
-      <button type="submit">Qo'shish</button>
-    </form>
+    <a href="https://8th-lslider.vercel.app/"><h2>6-mashq ustiga bosing</h2></a>
 
-    <div id="sliderContainer">
-      <button id="prevBtn">Oldingi</button>
-      <div
-        id="imageSlider"
-        style="width: 300px; height: 200px; overflow: hidden"
-      >
-        <div
-          id="slider"
-          style="display: flex; transition: transform 0.5s ease"
-        ></div>
-      </div>
-      <button id="nextBtn">Keyingi</button>
-    </div> -->
+    <!-- 7-MASHQ -->
+    <a id="exercise7" href="https://7th-l5th-m.vercel.app/">
+      <h2>7-mashq ustiga bosing</h2>
+    </a>
 
-    <script src="main.js"></script>
+    <!-- 8-MASHQ -->
+    <a href="exercise8"><h2>8-mashq</h2></a>
+    <div id="exercise8">
+      <form id="greeting">
+        <input type="text" id="hiName" placeholder="Ismingizni kitirig" />
+        <label for="gender">Jinsingizni tanlang</label>
+        <select id="gender">
+          <option value="male">Erkak</option>
+          <option value="female">Ayol</option>
+        </select>
+        <button class="subGreeting" type="submit">Salomlashish</button>
+      </form>
+      <div id="greetingMessage"></div>
+    </div>
+
+    <!-- 9-MASHQ -->
+    <a href="#exercise9"><h2>9-mashq</h2></a>
+    <div id="exercise9">
+      <form id="math">
+        <input type="number" id="num1" placeholder="1-sonni kitiring" />
+        <input type="number" id="num2" placeholder="2-sonni kitiring" />
+        <select id="mathOperation">
+          <option value="+">Qo'shish</option>
+          <option value="-">Ayirish</option>
+          <option value="*">Ko'paytirish</option>
+          <option value="/">Bo'lish</option>
+        </select>
+        <button type="submit">Hisoblash</button>
+      </form>
+      <div id="result"></div>
+    </div>
+
+    <!-- 10-MASHQ -->
+    <a href="#exercise10"><h2>10-mashq</h2></a>
+    <div id="exercise10">
+      <form id="productForm">
+        <input type="text" id="productName" />
+        <input type="number" id="productPrice" />
+        <input type="number" id="productCount" />
+        <button id="btnSaveProduct">save</button>
+      </form>
+      <table id="table">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Nomi</th>
+            <th>Narxi</th>
+            <th>Soni</th>
+            <th>Amallar</th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+        <tfoot>
+          <tr>
+            <td colspan="2">JAMI:</td>
+            <td id="overallPrice">3000</td>
+            <td id="overallCount">20</td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+
+    <script src="main.js" type="module"></script>
   </body>
 </html>
