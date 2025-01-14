@@ -1,4 +1,4 @@
-import { validate, createRow, getData } from "./functions";
+import { validate, createRow, getData } from "./functions.js";
 
 // 1-MASHQ
 const userForm = document.getElementById("userForm");
@@ -145,98 +145,74 @@ const overallPrice = document.querySelector("#overallPrice");
 prBtnSave &&
   prBtnSave.addEventListener("click", function (event) {
     event.preventDefault();
-    const isValid = validate();
-    if (!isValid) {
-      return;
-    }
+    if (!validate()) return;
+
     const product = {
       id: Date.now(),
       name: prName.value,
       price: prPrice.value,
       count: prCount.value,
     };
+
     let products = getData();
-    product.push(product);
+    products.push(product);
     localStorage.setItem("products", JSON.stringify(products));
+
     prForm.reset();
 
     let index = tbody.children.length + 1;
     let row = createRow(product, index);
     tbody.innerHTML += row;
 
-    let oldSumPrice = +overallPrice.innerHTML;
-    let oldSumCount = +overallCount.innerHTML;
-    overallCount.innerHTML = oldSumCount + Number(product.count);
-    overallPrice.innerHTML = oldSumPrice + Number(product.price);
+    overallCount.innerHTML = +overallCount.innerHTML + Number(product.count);
+    overallPrice.innerHTML = +overallPrice.innerHTML + Number(product.price);
   });
 
 document.addEventListener("DOMContentLoaded", function () {
-  let product = getData();
+  let products = getData();
   let sum = 0;
   let counter = 0;
 
-  product.length > 0 &&
-    product.forEach((product, index) => {
-      let row = createRow(product, index + 1);
-      tbody.innerHTML += row;
-      sum += Number(product.price);
-      counter += Number(product.count);
-    });
+  products.forEach((product, index) => {
+    let row = createRow(product, index + 1);
+    tbody.innerHTML += row;
+    sum += Number(product.price);
+    counter += Number(product.count);
+  });
+
   overallCount.innerHTML = counter;
   overallPrice.innerHTML = sum;
 
-  // delete actions
-  const deleteBtns = document.querySelectorAll("button.delete-tool");
+  document.querySelectorAll("button.delete-tool").forEach((deleteBtn) => {
+    deleteBtn.addEventListener("click", function () {
+      if (!confirm("Rostdan ham o'chirmoqchimisiz?")) return;
 
-  deleteBtns.length > 0 &&
-    deleteBtns.forEach((deleteBtn) => {
-      deleteBtn.addEventListener("click", function () {
-        let confirmDelete = confirm("Rostdan ham o'chirmoqchimisiz?");
-        let elementId = this.getAttribute("data-id");
+      let elementId = this.getAttribute("data-id");
+      let products = getData().filter((product) => product.id != elementId);
 
-        if (confirmDelete && elementId) {
-          let products = getData();
-          products = products.filter((product) => {
-            return product.id != elementId;
-          });
-
-          localStorage.setItem("products", JSON.stringify(products));
-
-          this.parentNode.parentNode.remove();
-          window.location.reload();
-        }
-      });
+      localStorage.setItem("products", JSON.stringify(products));
+      this.closest("tr").remove();
     });
+  });
 
-  //edit actions
+  document.querySelectorAll("button.edit-tool").forEach((editBtn) => {
+    editBtn.addEventListener("click", function () {
+      let elementId = this.getAttribute("data-id");
+      let products = getData();
+      let oldValue = products.find((product) => product.id == elementId);
 
-  const editBtns = document.querySelectorAll("button.edit-tool");
-  editBtns.length > 0 &&
-    editBtns.forEach((editBtn) => {
-      editBtn.addEventListener("click", function () {
-        let elementId = this.getAttribute("data-id");
-        let products = getData();
-        let oldValue = products.find((product) => {
-          return product.id == elementId;
-        });
-        let name = prompt("Nomi", oldValue.name);
-        let price = +prompt("Narxi", oldValue.price);
-        let count = +prompt("Soni", oldValue.count);
+      let name = prompt("Nomi", oldValue.name) || oldValue.name;
+      let price = +prompt("Narxi", oldValue.price) || oldValue.price;
+      let count = +prompt("Soni", oldValue.count) || oldValue.count;
 
-        let product = {
-          id: elementId,
-          name: name,
-          count: count,
-          price: price,
-        };
-        products = products.map((value) => {
-          if (value.id == elementId) {
-            value = product;
-          }
-          return value;
-        });
-        localStorage.setItem("proucts", JSON.stringify(products));
-        window.location.reload;
-      });
+      products = products.map((product) =>
+        product.id == elementId
+          ? { id: product.id, name, price, count }
+          : product
+      );
+
+      localStorage.setItem("products", JSON.stringify(products));
+      window.location.reload();
     });
+  });
 });

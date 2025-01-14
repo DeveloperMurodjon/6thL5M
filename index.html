@@ -9,6 +9,13 @@
       body {
         margin: 20px;
       }
+      ul {
+        list-style: none;
+        gap: 15px;
+      }
+      a {
+        text-decoration: none;
+      }
       form {
         margin-bottom: 20px;
       }
@@ -39,111 +46,187 @@
     </style>
   </head>
   <body>
+    <ul class="total" style="display: flex; flex-wrap: wrap">
+      <li>
+        <a href="#exercise1">
+          <h2>1-mashq</h2>
+        </a>
+      </li>
+      <li>
+        <a href="#exercise2">
+          <h2>2-mashq</h2>
+        </a>
+      </li>
+      <li>
+        <a href="#exercise3">
+          <h2>3-mashq</h2>
+        </a>
+      </li>
+      <li>
+        <a href="#exercise4">
+          <h2>4-mashq</h2>
+        </a>
+      </li>
+      <li>
+        <a href="#exercise5">
+          <h2>5-mashq</h2>
+        </a>
+      </li>
+      <li>
+        <a href="#exercise6">
+          <h2>6-mashq</h2>
+        </a>
+      </li>
+      <li>
+        <a href="#exercise7">
+          <h2>7-mashq</h2>
+        </a>
+      </li>
+      <li>
+        <a href="#exercise8">
+          <h2>8-mashq</h2>
+        </a>
+      </li>
+      <li>
+        <a href="#exercise9">
+          <h2>9-mashq</h2>
+        </a>
+      </li>
+      <li>
+        <a href="#exercise10">
+          <h2>10-mashq</h2>
+        </a>
+      </li>
+    </ul>
+
     <!-- 1-MASHQ -->
-    <h2>1-mashq</h2>
-    <p>
-      Foydalanuvchi forma maydonlariga o‘z ma’lumotlarini (ism, familiya, email)
-      kiritadi va Qo‘shish tugmasini bosganda, ushbu ma’lumotlar jadvalga
-      qo‘shiladi.
-    </p>
-    <form id="userForm">
-      <label>
-        Ism:
-        <input type="text" id="name" />
-      </label>
-      <label>
-        Familiya:
-        <input type="text" id="surname" />
-      </label>
-      <label> Email: <input type="email" id="email" required /> </label>
-      <button id="addBtn" type="submit">Qo'shish</button>
-    </form>
-    <h2>4-mashq</h2>
-    <p>
-      Foydalanuvchi formadagi Qidiruv maydoniga ma’lumot kiritganda, jadvaldagi
-      qatorlar qidiruv so‘ziga mos ravishda filtrlanadi.
-    </p>
-    <label for="search">Qidirish:</label>
-    <input id="search" type="search" />
-    <table id="dataTable">
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>Ism</th>
-          <th>Familiya</th>
-          <th>Email</th>
-          <th>O'zgartirish</th>
-        </tr>
-      </thead>
-      <tbody></tbody>
-    </table>
+    <div id="exercise1">
+      <a href="#exercise1">
+        <h2>1-mashq</h2>
+      </a>
+      <p>
+        Foydalanuvchi forma maydonlariga o‘z ma’lumotlarini (ism, familiya,
+        email) kiritadi va Qo‘shish tugmasini bosganda, ushbu ma’lumotlar
+        jadvalga qo‘shiladi.
+      </p>
+      <form id="userForm">
+        <label>
+          Ism:
+          <input type="text" id="name" />
+        </label>
+        <label>
+          Familiya:
+          <input type="text" id="surname" />
+        </label>
+        <label> Email: <input type="email" id="email" required /> </label>
+        <button id="addBtn" type="submit">Qo'shish</button>
+      </form>
+
+      <a href="#exercise4" id="exercise4">
+        <h2>4-mashq</h2>
+      </a>
+      <p>
+        Foydalanuvchi formadagi Qidiruv maydoniga ma’lumot kiritganda,
+        jadvaldagi qatorlar qidiruv so‘ziga mos ravishda filtrlanadi.
+      </p>
+      <label for="search">Qidirish:</label>
+      <input id="search" type="search" />
+      <table id="dataTable">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Ism</th>
+            <th>Familiya</th>
+            <th>Email</th>
+            <th>O'zgartirish</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
 
     <!-- 2-mashq -->
-    <h2>2-mashq</h2>
-    <form id="colorForm">
-      <label>
-        Rangni tanlang:
-        <input type="color" id="colorPicker" />
-      </label>
-    </form>
-    <div id="exampleText">Text</div>
+    <div id="exercise2">
+      <a href="#execise2">
+        <h2>2-mashq</h2>
+      </a>
+      <form id="colorForm">
+        <label>
+          Rangni tanlang:
+          <input type="color" id="colorPicker" />
+        </label>
+      </form>
+      <div id="exampleText">Text</div>
+    </div>
 
     <!-- 3-mashq -->
-    <h2>3-mashq</h2>
-    <form id="valForm">
-      <label>
-        Ism:
-        <input class="info" type="text" id="valName" />
-      </label>
-      <label>
-        Familiya:
-        <input class="info" type="text" id="valSurname" />
-      </label>
-      <label> Kasbingiz: <input class="info" type="text" /> </label>
-      <label>
-        Qaysi fudbol jamoasiga qiziqasiz:
-        <input class="info" type="tel" />
-      </label>
-      <label>
-        Manzil:
-        <input class="info" type="text" id="valAddress" />
-      </label>
-      <button id="submitBtn" type="submit">Yuborish</button>
-    </form>
+    <div id="exercise3">
+      <a href="#exercise3">
+        <h2>3-mashq</h2>
+      </a>
+      <form id="valForm">
+        <label>
+          Ism:
+          <input class="info" type="text" id="valName" />
+        </label>
+        <label>
+          Familiya:
+          <input class="info" type="text" id="valSurname" />
+        </label>
+        <label> Kasbingiz: <input class="info" type="text" /> </label>
+        <label>
+          Qaysi fudbol jamoasiga qiziqasiz:
+          <input class="info" type="tel" />
+        </label>
+        <label>
+          Manzil:
+          <input class="info" type="text" id="valAddress" />
+        </label>
+        <button id="submitBtn" type="submit">Yuborish</button>
+      </form>
+    </div>
 
     <!-- 5-mashq  //tushinmadim -->
-    <h2>5-mashq</h2>
-    <form id="elementForm">
-      <label for="elementType">Element turi:</label>
-      <input
-        type="text"
-        id="elementType"
-        placeholder="Masalan: div, p"
-        required
-      />
+    <div id="exercise5">
+      <a href="#exercise5">
+        <h2>5-mashq</h2>
+      </a>
+      <form id="elementForm">
+        <label for="elementType">Element turi:</label>
+        <input
+          type="text"
+          id="elementType"
+          placeholder="Masalan: div, p"
+          required
+        />
 
-      <label for="elementContent">Element mazmuni:</label>
-      <input
-        type="text"
-        id="elementContent"
-        placeholder="Elementning mazmuni"
-        required
-      />
-      <button type="submit">Yaratish</button>
-    </form>
-    <div id="createdElementsContainer"></div>
+        <label for="elementContent">Element mazmuni:</label>
+        <input
+          type="text"
+          id="elementContent"
+          placeholder="Elementning mazmuni"
+          required
+        />
+        <button type="submit">Yaratish</button>
+      </form>
+      <div id="createdElementsContainer"></div>
+    </div>
 
     <!-- 6-mashq -->
-    <a href="https://8th-lslider.vercel.app/"><h2>6-mashq ustiga bosing</h2></a>
+    <a id="exercise6" href="https://8th-lslider.vercel.app/"
+      ><h2>6-mashq ustiga bosing</h2></a
+    >
+    <p>Slider yaratish va boshqarish</p>
 
     <!-- 7-MASHQ -->
     <a id="exercise7" href="https://7th-l5th-m.vercel.app/">
       <h2>7-mashq ustiga bosing</h2>
     </a>
+    <p>Interaktiv ishlar ro‘yxati (To-Do List)</p>
 
     <!-- 8-MASHQ -->
-    <a href="exercise8"><h2>8-mashq</h2></a>
     <div id="exercise8">
+      <a href="#exercise8"><h2>8-mashq</h2></a>
       <form id="greeting">
         <input type="text" id="hiName" placeholder="Ismingizni kitirig" />
         <label for="gender">Jinsingizni tanlang</label>
@@ -157,8 +240,8 @@
     </div>
 
     <!-- 9-MASHQ -->
-    <a href="#exercise9"><h2>9-mashq</h2></a>
     <div id="exercise9">
+      <a href="#exercise9"><h2>9-mashq</h2></a>
       <form id="math">
         <input type="number" id="num1" placeholder="1-sonni kitiring" />
         <input type="number" id="num2" placeholder="2-sonni kitiring" />
@@ -174,35 +257,10 @@
     </div>
 
     <!-- 10-MASHQ -->
-    <a href="#exercise10"><h2>10-mashq</h2></a>
-    <div id="exercise10">
-      <form id="productForm">
-        <input type="text" id="productName" />
-        <input type="number" id="productPrice" />
-        <input type="number" id="productCount" />
-        <button id="btnSaveProduct">save</button>
-      </form>
-      <table id="table">
-        <thead>
-          <tr>
-            <th>No</th>
-            <th>Nomi</th>
-            <th>Narxi</th>
-            <th>Soni</th>
-            <th>Amallar</th>
-          </tr>
-        </thead>
-        <tbody id="tbody"></tbody>
-        <tfoot>
-          <tr>
-            <td colspan="2">JAMI:</td>
-            <td id="overallPrice">3000</td>
-            <td id="overallCount">20</td>
-          </tr>
-        </tfoot>
-      </table>
-    </div>
-
+    <a href="https://10th-lth-m-foo-table.vercel.app/" id="exercise10">
+      <h2>10-mashq ustiga bosing</h2></a
+    >
+    <p>Savdo savatchasi (Shopping Cart)</p>
     <script src="main.js" type="module"></script>
   </body>
 </html>
